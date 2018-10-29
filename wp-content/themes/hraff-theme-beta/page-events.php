@@ -16,13 +16,21 @@
   <article>
   
     <?php if ( is_archive() || is_home() ) { ?>
-      <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-      <?php
-      the_excerpt();
-    } else {
-      the_content();
-    }?>
-    
+		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+		<?php
+			the_excerpt();
+		} else {
+			the_content();
+		}?>
+		<div><?php the_field('event_date'); ?></div>
+		<div><?php the_field('event_language'); ?></div>
+		<div><?php if( get_field( 'event_duration' ) ) {
+			the_field( 'event_duration' );
+		}?></div>
+		<div><?php if( get_field( 'age_restriction' ) ) {
+			the_field( 'age_restriction' );
+		}?></div>
+	
   </article>
   
   <?php endwhile; else : ?>
