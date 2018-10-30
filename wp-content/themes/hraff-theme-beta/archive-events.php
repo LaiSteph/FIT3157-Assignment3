@@ -8,10 +8,9 @@
   <h2><?php wp_title( '' ); ?></h2>
   
   <?php 
-	query_posts( array( 'post_type' => 'event', 'posts_per_page' => 20));
+	query_posts( array( 'post_type' => 'events', 'posts_per_page' => 20));
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); 
   ?>
-  
   
   <article>
   
