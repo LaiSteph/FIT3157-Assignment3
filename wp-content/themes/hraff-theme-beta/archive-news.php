@@ -6,7 +6,6 @@
 <section>
 <!-- ========== START PAGE TEMPLATE ========== -->
   <h2><?php wp_title( '' ); ?></h2>
-  
   <?php 
 	query_posts( array( 'post_type' => 'news'));
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); 
