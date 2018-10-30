@@ -19,7 +19,7 @@
         of others in our community and beyond. <br/><br/>Martin Foley - Minister for Creative Industries</p></section>
     
 <!-- Film -->    
-    <div>
+    <div id="film-program">
     <h2>Film Program</h2>
     <?php 
 	query_posts( array( 'post_type' => 'event', 'event_type'=>'film', 'posts_per_page' => 3));
@@ -38,9 +38,9 @@
 			the_content();
 		}?>
 		<div><?php the_field('event_date'); ?></div>
-		<div><?php the_field('event_language'); ?></div>
+		<div><?php the_field('venue_name'); ?></div>
 		<div><?php if( get_field( 'event_duration' ) ) {
-			the_field( 'event_duration' );
+			the_field( 'event_duration' ).print(" mins");
 		}?></div>
 		<div><?php if( get_field( 'age_restriction' ) ) {
 			the_field( 'age_restriction' );
@@ -76,10 +76,7 @@
 			the_content();
 		}?>
 		<div><?php the_field('event_date'); ?></div>
-		<div><?php the_field('event_language'); ?></div>
-		<div><?php if( get_field( 'event_duration' ) ) {
-			the_field( 'event_duration' );
-		}?></div>
+        <div><?php the_field('venue_name'); ?></div>    
 		<div><?php if( get_field( 'age_restriction' ) ) {
 			the_field( 'age_restriction' );
 		}?></div>
