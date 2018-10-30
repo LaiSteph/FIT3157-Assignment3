@@ -8,7 +8,7 @@
   <h2><?php wp_title( '' ); ?></h2>
   
   <?php 
-	query_posts( array( 'post_type' => 'event', 'posts_per_page' => 20));
+	query_posts( array( 'post_type' => 'news'));
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); 
   ?>
   
@@ -22,13 +22,9 @@
 		} else {
 			the_content();
 		}?>
-		<div><?php the_field('event_date'); ?></div>
-		<div><?php the_field('event_language'); ?></div>
-		<div><?php if( get_field( 'event_duration' ) ) {
-			the_field( 'event_duration' );
-		}?></div>
-		<div><?php if( get_field( 'age_restriction' ) ) {
-			the_field( 'age_restriction' );
+		<div><?php the_date();?></div>
+		<div><?php if( get_field( 'article_author' ) ) {
+			the_field( 'article_author' );
 		}?></div>
 	
   </article>
