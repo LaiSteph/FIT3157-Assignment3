@@ -7,7 +7,7 @@
 <!-- ========== START PAGE TEMPLATE ========== -->
 
   <h2><?php wp_title( '' ); ?></h2>
-  
+    
   <section>
     <h3 class="intro">The Human Rights Arts and Film Festival (HRAFF) was founded in 2007 to make human rights relevant, accessible, and engaging to all Australians.</h3>
     <p> Welcome to the 2018 Human Rights Arts & Film Festival.
@@ -32,7 +32,8 @@
     <?php if ( is_archive() || is_home() ) { ?>
 		<div class="home-event">
         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-		<?php
+        <div><?php the_post_thumbnail('thumbnail');?></div>
+            <?php
 			the_excerpt();
 		} else {
 			the_content();
@@ -70,7 +71,8 @@
     <?php if ( is_archive() || is_home() ) { ?>
 		<div class="home-event">
         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-		<?php
+        <div><?php the_post_thumbnail('thumbnail');?></div>
+        <?php
 			the_excerpt();
 		} else {
 			the_content();
