@@ -16,7 +16,7 @@
   </header>
   <div id="navbar">
 	  <div style="text-align:center;">
-		<img id="float-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hraff-logo.svg" height="75px" style=""/>
+		<a href="<?php bloginfo( 'url' ); ?>"><img id="float-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hraff-logo.svg" height="75px"/></a>
 		</div>
 	  <nav>
 		<?php wp_nav_menu( [ 'theme_location' => 'main-menu' ] ); ?>
