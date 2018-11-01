@@ -22,7 +22,7 @@
     <div id="film-program">
     <h2>Film Program</h2>
     <?php 
-	query_posts( array( 'post_type' => 'event', 'event_type'=>'film', 'posts_per_page' => 3));
+	query_posts( array( 'post_type' => 'events', 'event_type'=>'film', 'posts_per_page' => 3));
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); 
   ?>
   
@@ -60,7 +60,7 @@
     <div>
         <h2>Arts Program</h2>
     <?php 
-	query_posts( array( 'post_type' => 'event', 'event_type' => 'art', 'posts_per_page' => 3));
+	query_posts( array( 'post_type' => 'events', 'event_type' => 'art', 'posts_per_page' => 3));
 	if ( have_posts() ) : while ( have_posts() ) : the_post(); 
   ?>
   
