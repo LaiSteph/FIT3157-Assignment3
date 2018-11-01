@@ -13,20 +13,44 @@ License URI: http://creativecommons.org/publicdomain/zero/1.0/
 
 body {
   background-color: #333;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
 }
 
 header {
-  background-color: #eee;
-  padding: 20px;
+	background-color: #eee;
+	padding: 0;
+	font-family: 'Oxygen', sans-serif;
+  	display: grid;
+	grid-template-columns: 15vw 70vw 15vw;
+	grid-template-areas: "left middle right";
+}
+
+/*header h1 {
+	grid-area: middle;
+}*/
+
+header img {
+	padding: 20px;
+	grid-area: left;
+}
+
+header h1 {
+	padding: 20px;
+}
+
+#navbar {
+	display: grid;
+	grid-template-columns: 15vw 70vw 15vw;
+	grid-template-areas: "left middle right";
+	background-color: #ddd;
 }
 
 nav {
-  background-color: #ddd;
   padding: 20px;
+  grid-area: middle;
 }
 
 nav ul {
@@ -42,7 +66,9 @@ nav li {
 
 section {
   background-color: #fff;
-  padding:20px;
+  width: 70vw;
+  padding: 20px 50px;
+  margin-left: 15vw;
 }
 
 footer {
@@ -53,4 +79,19 @@ footer {
 img.size-large {
   width: 100%;
   height: auto;
+}
+
+.float {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.swag {
+	background-color: red;
+}
+
+#title {
+	background-color: red;
+	height: 0px;
 }
