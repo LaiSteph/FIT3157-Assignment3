@@ -10,17 +10,35 @@
 
   <header>
 	<div>
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hraff-logo.svg" width="100%"/>
+		<a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hraff-logo.svg" width="100%"/></a>
 	</div>
-    <h1><a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'name' ) ?></a></h1>
+    <!--h1><?php bloginfo( 'name' ) ?></h1-->
   </header>
   <div id="navbar">
+	  <div style="text-align:center;">
+		<img id="float-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hraff-logo.svg" height="75px" style=""/>
+		</div>
 	  <nav>
 		<?php wp_nav_menu( [ 'theme_location' => 'main-menu' ] ); ?>
 	  </nav>
   </div>
   <div id="title"></div>
   <script>
+	var header = document.getElementsByTagName("header")[0];
+	var navlogo = document.getElementById("float-logo");
+	window.addEventListener('scroll', function(e){
+		let headheight = header.clientHeight;
+		scroll = window.scrollY;
+			if (scroll > headheight){
+				navlogo.style.opacity = 1;
+			}
+			else {
+				navlogo.style.opacity = 0;
+			}
+		}
+		);
+  </script>
+  <!--script>
 	var header = document.getElementsByTagName("header")[0];
 	console.log(header);
 	var scroll;
@@ -37,12 +55,12 @@
 				title.setAttribute("style", "background-color: blue; height: "+ navbar.clientHeight +"px");
 				navbar.classList.add("float");
 				navbar.style.width = header.offsetWidth+"px";
-				//navlogo.style.opacity = 1;
+				navlogo.style.opacity = 1;
 			}
 			else {
 				title.setAttribute("style", "background-color: red; height: 0px");
 				navbar.classList.remove("float");
-				//navlogo.style.opacity = 0;
+				navlogo.style.opacity = 0;
 			}
 		}
-})</script>
+})</script--!>
