@@ -4,6 +4,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:700|Oxygen:700" rel="stylesheet">
   <?php wp_head(); ?>
+    
 </head>
 
 <body>
