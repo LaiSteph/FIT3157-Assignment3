@@ -12,7 +12,7 @@ License URI: http://creativecommons.org/publicdomain/zero/1.0/
 }
 
 body {
-  background-color: #333;
+  background-color: #fff;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -193,4 +193,56 @@ img.size-large {
 	grid-rows: 18.67vw;
 	grid-gap: 2vw;
 	
+}
+
+h2.article-title {
+	font-size: 6vh;
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #F9F9F9;
+}
+
+span.post-type {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: grey;
+	font-size: 2vh;
+	display: block;
+}
+
+span.author {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: grey;
+	font-size: 2vh;
+	display: block;
+}
+
+.title-banner {
+	position: relative;
+	width: 100vw;
+	max-height: 50vh;
+	overflow: hidden;
+}
+
+.title-banner.no-image {
+	height: 30vh;
+	background-color: black;
+}
+
+.title-banner-info {
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	bottom: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	height: auto;
+	width: 100%;
+}
+
+article.news-article {
+	font-size: 3vh;
 }
