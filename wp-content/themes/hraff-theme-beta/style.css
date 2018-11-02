@@ -12,21 +12,71 @@ License URI: http://creativecommons.org/publicdomain/zero/1.0/
 }
 
 body {
-  background-color: #333;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 0 20px;
+  background-color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 header {
-  background-color: #eee;
-  padding: 20px;
+	background-color: #f9f9f9;
+	padding: 0;
+	font-family: 'Oxygen', sans-serif;
+  	display: grid;
+	grid-template-columns: 15vw 70vw 15vw;
+	grid-template-areas: "left middle right";
+	position: relative;
+	z-index: 3;
+	height: 30vh;
+	width: 100vw;
+}
+
+/*header h1 {
+	grid-area: middle;
+}*/
+
+header img {
+	padding: 20px;
+}
+
+header h1 {
+	padding: 20px;
+}
+
+.banner {
+	grid-area: right;
+	position: relative;
+}
+
+.banner img {
+	padding: 0px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+
+#navbar {
+	width: 100vw;
+	position: sticky;
+	top:0;
+	display: grid;
+	grid-template-columns: 15vw 70vw 15vw;
+	grid-template-areas: "left middle right";
+	background-color: #f9f9f9;
+	box-shadow: 0px 0px 5px 0px black;
+	z-index: 2;
+	min-height: 100px;
 }
 
 nav {
-  background-color: #ddd;
-  padding: 20px;
+	text-align:center;
+  position: absolute;
+  bottom: 0;
+  grid-area: middle;
+  width: 100%;
 }
 
 nav ul {
@@ -37,20 +87,196 @@ nav ul {
 
 nav li {
   display: inline;
-  margin-right: 20px;
+}
+
+nav a {
+	font-size: 25px;
+	padding: 10px;
+	display: inline-block;
+	height: 50px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+  color: #0d0d0d;
+}
+
+nav a:hover {
+  background-color: #F0732D;
+  color: #f9f9f9;
+}
+
+nav a:visited {
+	text-decoration: none;
 }
 
 section {
   background-color: #fff;
-  padding:20px;
+  width: 70vw;
+  padding: 2vw 5vw;
+  margin-left: 15vw;
+  min-height: 60vh;
+}
+
+section h2 {
+	color: #F0732D;
+	font-size: 5vh;
+	text-transform: uppercase;
 }
 
 footer {
-  background-color: #ddd;
+  background-color: #f9f9f9;
   padding: 20px;
+  box-shadow: 0px 0px 5px black;
+  width: 100vw;
+  text-align: center;
+}
+
+footer a {
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 img.size-large {
   width: 100%;
   height: auto;
+}
+
+.float {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.swag {
+	background-color: red;
+}
+
+#title {
+	background-color: red;
+	height: 0px;
+}
+
+#float-logo {
+	padding-top: 5px;
+	opacity: 0;
+	transition: 0.5s;
+	bottom: 0;
+}
+
+.event-container {
+	text-decoration: none;
+	
+}
+
+.event-container:hover {
+	transform: scale(1.1);
+	box-shadow: 5px 5px 10px gray;
+	cursor: pointer;
+}
+
+.event-container {
+	background-color: #0D0D0D;
+	width: 100%;
+	height: 20vw;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 60% auto auto auto;
+	grid-template-areas: 	"event-image"
+							"event-title"
+							"event-excerpt"
+							"event-date";
+}
+
+.event-container .event-image {
+	text-align: center;
+	overflow: hidden;
+	grid-area: event-image;
+}
+.event-container .event-image img {
+	position: relative;
+	width: 200%;
+	transform: translateX(-25%);
+}
+
+.event-container .event-title {
+	grid-area: event-title;
+	padding: .5vw 1vw;
+	font-weight: bold;
+	color: #F9F9F9;
+	font-size: 1.2vw;
+}
+
+.event-container .event-date {
+	color: #F9F9F9;
+	padding: .5vw 1vw;
+	font-size: 1vw;
+	font-weight: bold;
+}
+
+.event-container .event-excerpt {
+	grid-area: event-excerpt;
+	color: #F9F9F9;
+	padding: 0vw 1vw;
+	font-size: .8vw;
+}
+
+.event-listings {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 18.67vw 18.67vw 18.67vw;
+	grid-rows: 18.67vw;
+	grid-gap: 2vw;
+	
+}
+
+h2.article-title {
+	font-size: 6vh;
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #F9F9F9;
+}
+
+span.post-type {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: grey;
+	font-size: 2vh;
+	display: block;
+}
+
+span.author {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: grey;
+	font-size: 2vh;
+	display: block;
+}
+
+.title-banner {
+	position: relative;
+	width: 100vw;
+	max-height: 50vh;
+	overflow: hidden;
+}
+
+.title-banner.no-image {
+	height: 30vh;
+	background-color: black;
+}
+
+.title-banner-info {
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	bottom: 0;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	height: auto;
+	width: 100%;
+}
+
+article.news-article {
+	font-size: 3vh;
 }
