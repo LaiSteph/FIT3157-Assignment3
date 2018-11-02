@@ -259,7 +259,7 @@ h2.article-title {
 span.post-type {
 	text-transform: uppercase;
 	font-weight: bold;
-	color: grey;
+	color: silver;
 	font-size: 2vh;
 	display: block;
 }
@@ -267,7 +267,7 @@ span.post-type {
 span.author {
 	text-transform: uppercase;
 	font-weight: bold;
-	color: grey;
+	color: silver;
 	font-size: 2vh;
 	display: block;
 }
@@ -281,7 +281,7 @@ span.author {
 
 .title-banner.no-image {
 	height: 30vh;
-	background-color: black;
+	background-color: #F0732D;
 }
 
 .title-banner-info {
@@ -298,4 +298,22 @@ span.author {
 
 article.news-article {
 	font-size: 3vh;
+}
+
+.author-snippet {
+	display: grid;
+	grid-template-areas: 'author-image author-description'
+						'author-name author-description';
+}
+
+.author-image {
+	grid-area: author-image;
+}
+
+.author-desciption {
+	grid-area: author-description;
+}
+
+.author-name {
+	grid-area: author-name;
 }

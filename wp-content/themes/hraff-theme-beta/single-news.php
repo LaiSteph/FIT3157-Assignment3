@@ -14,7 +14,10 @@
 			<h2 class="article-title"><?php wp_title( '' ); ?></h2>
 			<span class="author"><?php
 					$terms = wp_get_post_terms(get_the_ID(), 'article_author');
-					echo $terms[0]->name;
+					$author_name = $terms[0]->name;
+					$author_desc = $terms[0]->description;
+					$author_image = $terms[0]->author_image;
+					echo $author_name;
 				?></span>
 		</div>
 	</div>
@@ -33,8 +36,13 @@
       
       the_content();
     }?>
-	
+	<!--div class="author-snippet">
+		<img class="author-image" src="<?php echo $author_image; ?>"/>
+		<span class="author-name"=><?php echo $author_name; ?></span>
+		<span class="author-description"=><?php echo $author_desc; ?></span>
+	</div-->
   </article>
+  
   
   <?php endwhile; else : ?>
   
