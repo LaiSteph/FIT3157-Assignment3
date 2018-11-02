@@ -12,7 +12,9 @@
 	<div>
 		<a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hraff-logo.svg" width="100%"/></a>
 	</div>
-    <!--h1><?php bloginfo( 'name' ) ?></h1-->
+	<div class="banner">
+		<img class="banner" src="<?php echo get_stylesheet_directory_uri(); ?>/images/banner.png"/>
+	</div>
   </header>
   <div id="navbar">
 	  <div style="text-align:center;">
@@ -38,29 +40,3 @@
 		}
 		);
   </script>
-  <!--script>
-	var header = document.getElementsByTagName("header")[0];
-	console.log(header);
-	var scroll;
-	var navbar = document.getElementById("navbar");
-	var navlogo = document.getElementById("float-logo");
-	var title = document.getElementById("title");
-	var body = document.getElementsByTagName("body")[0];
-	window.addEventListener('scroll', function(e){
-		let headheight = header.clientHeight;
-		//let navheight = navbar.clientHeight;
-		scroll = window.scrollY;
-		if (window.innerWidth > 500){
-			if (scroll > headheight){
-				title.setAttribute("style", "background-color: blue; height: "+ navbar.clientHeight +"px");
-				navbar.classList.add("float");
-				navbar.style.width = header.offsetWidth+"px";
-				navlogo.style.opacity = 1;
-			}
-			else {
-				title.setAttribute("style", "background-color: red; height: 0px");
-				navbar.classList.remove("float");
-				navlogo.style.opacity = 0;
-			}
-		}
-})</script--!>
