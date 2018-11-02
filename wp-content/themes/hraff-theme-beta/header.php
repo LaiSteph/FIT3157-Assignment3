@@ -3,6 +3,7 @@
 	<title><?php wp_title( '-', true, 'right' ); bloginfo( 'name' ); ?></title>
   <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
   <?php wp_head(); ?>
+    
 </head>
 
 <body>

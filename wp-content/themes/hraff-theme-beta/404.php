@@ -1,30 +1,16 @@
 <?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
- */
 
 get_header(); ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'The page you\'re looking for can\'t be found.', 'twentyfifteen' ); ?></h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p><?php _e( 'Maybe try a search?', 'twentyfifteen' ); ?></p>
-
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+<div id="error-message">
+    <section>
+        <h1>The page you're looking for can't be found.</h1>
+        <p>The link may be broken, or the page may have been removed. Would you like to try a search?</p>
+        <div class="search-box">
+        <input type="text" placeholder="search"> <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+            </div>
+    </section>
+</div>
 
 <?php get_footer(); ?>
